@@ -1,0 +1,325 @@
+/* Forces the container to lay items out in a row */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Adds clean spacing between the two columns */
+    flex-wrap: wrap; /* Prevents breaking on smaller screens */
+}
+
+/* Forces each image to break to a new line above its respective button */
+img {
+    display: block;
+    max-width: 300px; /* Resizes images so both fit easily side-by-side */
+    height: auto;
+}
+
+button {
+    display: block;
+    margin-top: 10px; /* Adds spacing between the image and its button */
+}
+
+body {
+    background: linear-gradient(135deg, #1c1917, #3b2418, #704214);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 30px 15px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px 30px;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Coffee Button */
+
+.coffee {
+    background: linear-gradient(135deg, #8b4513, #d2691e);
+    color: white;
+    border: 2px solid #e0a16b;
+}
+
+.coffee:hover {
+    background: linear-gradient(135deg, #a0522d, #f4a460);
+}
+
+/* Juice Button */
+
+.juice {
+    background: linear-gradient(135deg, #16803c, #38c172);
+    color: white;
+    border: 2px solid #8be0a5;
+}
+
+.juice:hover {
+    background: linear-gradient(135deg, #20a050, #50df88);
+}
+
+/* Order Summary Card */
+
+#orderMessage {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 450px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+/* Smooth Appearance */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Order Summary Card */
+
+#orderMessage {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 450px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+/* Smooth Appearance */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Quantity Selection Design */
+
+#quantitySection {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+}
+
+#quantitySection button {
+    background: linear-gradient(135deg, #34495e, #566573);
+    color: white;
+    border: 2px solid #85929e;
+    border-radius: 15px;
+    min-width: 110px;
+}
+
+#quantitySection button:hover {
+    background: linear-gradient(135deg, #d68910, #f4d03f);
+    color: #17202a;
+    transform: translateY(-5px);
+}
+
+#quantityMessage {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f4d03f;
+    margin-top: 20px;
+}
+
+/* Drink Image Styling */
+
+img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Heading */
+
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffd166;
+    text-shadow: 0 3px 12px rgba(255, 209, 102, 0.35);
+}
+
+/* Subheading */
+
+h2 {
+    font-size: 25px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Status Messages */
+
+#message,
+#quantityMessage,
+#orderError {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+#message {
+    color: #f8f9fa;
+}
+
+#quantityMessage {
+    color: #ffd166;
+}
+
+#orderError {
+    color: #ff6b6b;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    img {
+        width: 180px;
+        height: 180px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+
+    #orderMessage {
+        width: auto;
+        margin: 20px 10px;
+    }
+}
+
+/* Drink Selection Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Individual Drink Cards */
+.drink-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.drink-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Drink Buttons */
+.drink-box button {
+    min-width: 180px;
+    margin-top: 15px;
+}
+
+/* DIGITAL RECEIPT GLASS EFFECT */
+
+#receiptSection {
+    max-width: 450px;
+    margin: 35px auto;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    animation: fadeIn 0.5s ease;
+}
+
+#receiptSection h2 {
+    color: #ffd700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+#receiptSection p {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+#receiptSection h3 {
+    color: #90ee90;
+    margin-top: 25px;
+}

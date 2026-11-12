@@ -1,0 +1,7 @@
+img {
+    display: block;
+    width: 250px;         /* Forces both to be this wide */
+    height: 320px;        /* Forces both to be this tall */
+    object-fit: cover;    /* Prevents stretching by cleanly cropping the photo */
+    border-radius: 4px;   /* Optional: adds a slight corner curve */
+}

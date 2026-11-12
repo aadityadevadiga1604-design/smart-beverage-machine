@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Beverage Machine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image.css">
+    <link rel="icon" href="images/machine.jpg" type="images/x-icon">
+
+    <style>
+        body { 
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    padding: 40px;
+}   
+
+        h1 {
+            color: #f1c40f;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 20px 40px;
+            margin: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .coffee {
+            background: #b87333;
+            color: white;
+        }
+
+        .juice {
+            background: #27ae60;
+            color: white;
+        }
+
+        #message {
+            margin-top: 40px;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>SMART BEVERAGE MACHINE</h1>
+
+    <h2>Welcome! Select Your Drink</h2>
+
+    <div class="container">
+
+    <div class="drink-box">
+        
+        <img src="images/coffee.jpg" alt="coffee">
+        <br>
+        <button class="coffee"
+        onclick="selectDrink('Coffee')">
+            ☕ COFFEE
+        </button>
+    </div>
+        
+    <div class="drink-box">
+        
+        <img src="images/juice.jpg" alt="juice">
+        <br>
+        <button class="juice"
+        onclick="selectDrink('Juice')">
+            🥤 JUICE
+        </button>
+        
+
+    </div>
+
+    </div>
+
+    <p id="message">Waiting for your selection...</p>
+
+    <div id="quantitySection" style="display:none;">
+
+    <h2>Select Your Quantity</h2>
+
+    <button onclick="selectQuantity(150)">150 ml</button>
+
+    <button onclick="selectQuantity(250)">250 ml</button>
+
+    <button onclick="selectQuantity(350)">350 ml</button>
+
+    <p id="quantityMessage"></p>
+
+    <button onclick="continueOrder()">CONTINUE</button>
+
+</div>
+
+   <p id="orderError"></p>
+
+<div id="orderMessage" style="display:none;">
+
+    <h2>Order Summary</h2>
+
+    <p id="orderDetails"></p>
+
+    <button onclick="confirmOrder()">CONFIRM ORDER</button>
+
+    <button onclick="cancelOrder()">CANCEL ORDER</button>
+
+    <p id="finalMessage"></p>
+
+    <p id="dispensingStatus"></p>
+
+    <p id="countdownTimer"></p>
+
+</div>
+
+<!-- DIGITAL RECEIPT -->
+
+<div id="receiptSection" style="display:none;">
+
+    <h2>🧾 ORDER RECEIPT</h2>
+
+    <p id="receiptNumber"></p>
+    <p id="receiptDrink"></p>
+    <p id="receiptQuantity"></p>
+    <p id="receiptDate"></p>
+    <p id="receiptTime"></p>
+    <p id="receiptStatus"></p>
+
+    <h3>Thank you for ordering!</h3>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
